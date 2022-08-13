@@ -21,6 +21,12 @@ public class UIManager : MonoBehaviour
 
         UIGameOver.enabled = false;
         UIWin.enabled = false;
+
+    }
+
+    private void Start()
+    {
+        Time.timeScale = 1;
     }
 
     public void UIEnable(UIDocument ui)
@@ -32,7 +38,6 @@ public class UIManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
